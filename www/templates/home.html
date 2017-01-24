@@ -1,0 +1,30 @@
+<ion-view view-title="Free Hot Books">
+  <ion-content>
+    <div class="card">
+        <div class="item item-divider">
+            Best Sellers of the Week
+           
+        </div>
+        <ion-list>
+        <ion-item ng-repeat="bestseller in bestsellers" href="#/app/books/{{bestseller.id}}" class="item-thumbnail-left">
+        <img ng-src="{{baseURL+bestseller.image}}">
+        <h2>{{bestseller.name}}
+        <small> {{bestseller.author}}</small></h2>
+        <h4>Rating: {{bestseller.rating}}</h4>
+        <h5>{{bestseller.category}}</h5> 
+        <p>{{bestseller.description}}</p>
+       </ion-item>
+    </ion-list>
+    </div>
+      <div class="card">
+          <div class="item item-divider">
+           Featured author
+          </div>
+          <div class="item item-thumbnail-left item-text-wrap">
+               <img ng-src="{{baseURL+author.image}}" alt="{{author.name}}">
+                <h2>{{author.name}}</h2>
+                <p>{{author.trivia}}</p>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

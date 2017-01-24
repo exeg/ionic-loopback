@@ -1,0 +1,39 @@
+<ion-view view-title="Book Details">
+     <ion-nav-buttons side="secondary">
+      <div class="buttons">
+        <button class="button button-icon icon ion-more"
+          ng-click="openPopover($event)"></button>
+      </div>
+    </ion-nav-buttons>
+  <ion-content>
+      <div class="card">
+          <div class="item item-body item-text-wrap">
+               <img  height="300" width="200" ng-src="{{baseURL+book.image}}" alt="">
+                <h2>{{book.name}} 
+                <small> {{book.author}}</small></h2>
+      		    <h4>Rating: {{book.rating}}</h4>
+        		<h3>{{book.category}}</h3> 
+        		<p>{{book.description}}</p>
+            <p><button ion-button round outline class="sponsor" ng-click="ToSponsor()">Amazon</button>
+				    </p>
+           </div>
+      </div>
+      <!--div class="row">
+            <div class="col col-offset-10">
+                   <h4>Customer Comments &nbsp;&nbsp;&nbsp;
+                       <small>Sort by: &nbsp; 
+                            <input type="text" ng-model="orderText">   
+                       </small></h4>
+                    <ul class="list">
+                        <li ng-repeat="comment in comments">
+                          <blockquote>
+                             <p>{{comment.rating}} Stars</p>
+                             <p>{{comment.comment}}</p>
+                             <footer>{{comment.postedBy}}, {{comment.updatedAt | date:'MMM. dd, yyyy'}}</footer>
+                          </blockquote>
+                        </li>
+                    </ul>
+            </div>
+      </div-->
+  </ion-content>
+</ion-view>

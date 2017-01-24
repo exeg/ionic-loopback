@@ -1,0 +1,20 @@
+<ion-view view-title="Free Hot Books">
+  <ion-content>
+    <div class="card">
+        <div class="item item-divider" align="center">
+            Best Hot Books
+            <span class="badge badge-assertive">New!!</span>
+        </div>
+    <ion-list>
+        <ion-item ng-repeat="book in books" href="#/app/books/{{book.id}}" class="item-thumbnail-left">
+        <img ng-src="{{baseURL+book.image}}">
+        <h2>{{book.name}}
+        <small> {{book.author}}</small></h2>
+        <h4>Rating: {{book.rating}}</h4>
+        <h5>{{book.category}}</h5> 
+        <p>{{book.description}}</p>
+       </ion-item>
+   </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
